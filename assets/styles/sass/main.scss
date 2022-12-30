@@ -1,0 +1,109 @@
+@font-face {
+
+    font-family: "title";
+    src: url( "/assets/fonts/UberMoveBold.otf" );
+
+}
+
+@font-face {
+
+    font-family: "button";
+    src: url( "/assets/fonts/UberMoveMedium.otf" );
+
+}
+
+//
+
+body {
+
+    background: rgb(255, 60, 60);
+    margin: 0px;
+    overflow: hidden;
+
+}
+
+content {
+
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 1;
+
+}
+
+nav-bar {
+
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+    width: 100vw;
+    height: 64px;
+
+    background: transparent;
+    text-align: left;
+
+    z-index: 3;
+
+    & nav-left {
+
+        height: 100%;
+
+        align-items: flex-end;
+        display: flex;
+        float: left;
+        justify-content: flex-start;
+
+        & nav-title {
+
+            margin: 0px 32px 0px 32px;
+
+            color: white;
+            font-family: 'title';
+            font-size: 32px;
+            letter-spacing: 1px;
+
+        }
+
+        & nav-btn {
+
+            margin: 0px 16px 8px 0px;
+
+            color: white;
+            font-family: 'button';
+            font-size: 20px;
+            letter-spacing: 1px;
+            transition: 0.5s ease;
+
+            cursor: pointer;
+
+            &:hover {
+
+                margin: 0px 32px 8px 16px;
+
+                color: black;
+
+            }
+
+        }
+
+    }
+
+}
+
+world {
+    
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 2;
+
+}

@@ -1,0 +1,25 @@
+{
+  "name": "copernicus-portfolio-2",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikolas-karinja/copernicus-portfolio-2.git"
+  },
+  "author": "Nikolas Karinja",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nikolas-karinja/copernicus-portfolio-2/issues"
+  },
+  "homepage": "https://github.com/nikolas-karinja/copernicus-portfolio-2#readme",
+  "devDependencies": {
+    "@nikolas.karinja/app-utils": "^0.3.23",
+    "@nikolas.karinja/ecs": "^0.2.15",
+    "simplex-noise": "^4.0.1",
+    "three": "^0.148.0"
+  }
+}
