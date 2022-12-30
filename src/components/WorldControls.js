@@ -13,9 +13,12 @@ export class WorldControls extends ECS.Component {
         this.Scene    = this.Parent.Scene
 
         this.Controls = new OrbitControls( this.Camera, this.Renderer.domElement )
-        this.Controls.autoRotate    = true
-        this.Controls.enableDamping = true
-        this.Controls.enableZoom    = false
+        this.Controls.autoRotate      = true
+        this.Controls.autoRotateSpeed = 0.3
+        this.Controls.dampingFactor   = 0.02
+        this.Controls.enableDamping   = true
+        this.Controls.enablePan       = false
+        this.Controls.enableZoom      = false
 
     }
 

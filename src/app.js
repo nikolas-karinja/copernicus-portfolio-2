@@ -2,6 +2,7 @@ import * as AppUtils from '@nikolas.karinja/app-utils'
 import * as ECS from '@nikolas.karinja/ecs'
 import * as Elements from './constants/elements.js'
 import * as ThreeC from './constants/three.js'
+import * as TWEEN from './libs/tween.js'
 import { WorldEntity } from './entities/WorldEntity.js'
 
 // components
@@ -11,6 +12,9 @@ import { WorldLights } from './components/WorldLights.js'
 import { WorldMesh } from './components/WorldMesh.js'
 import { WorldNoise } from './components/WorldNoise.js'
 import { WorldRender } from './components/WorldRender.js'
+import { WorldTrees } from './components/WorldTrees.js'
+import { WorldVertexColors } from './components/WorldVertexColors.js'
+import { WorldWater } from './components/WorldWater.js'
 
 export class App extends AppUtils.Apps.BasicThreeApp {
 
@@ -32,6 +36,8 @@ export class App extends AppUtils.Apps.BasicThreeApp {
 
         this.ECSManager.assemble( 'World', WorldEntity, {} )
 
+        window.addEventListener( 'resize', () => this.resize() )
+
     }
 
     initAssemblies () {
@@ -43,6 +49,11 @@ export class App extends AppUtils.Apps.BasicThreeApp {
             entity.addComponent( WorldRender )
             entity.addComponent( WorldControls )
             entity.addComponent( WorldLights )
+            entity.addComponent( WorldVertexColors )
+            entity.addComponent( WorldWater )
+            entity.addComponent( WorldTrees )
+
+            this.World = entity
 
         } )
 
@@ -50,7 +61,15 @@ export class App extends AppUtils.Apps.BasicThreeApp {
 
     onUpdate ( dT, eT, uA ) {
 
+        TWEEN.update( this.Time.frame )
+
         this.ECSManager.update( dT, eT, uA )
+
+    }
+
+    resize () {
+
+        if ( this.World ) this.World.resize()
 
     }
 

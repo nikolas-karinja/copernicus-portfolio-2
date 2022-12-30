@@ -3,7 +3,7 @@ import * as THREE from 'three'
 
 export function buildRenderer ( name, parent ) {
 
-    const Renderer = new THREE.WebGLRenderer()
+    const Renderer = new THREE.WebGLRenderer( { alpha: true } )
     Renderer.setPixelRatio( window.devicePixelRatio )
     Renderer.setSize( parent.clientWidth, parent.clientHeight )
 

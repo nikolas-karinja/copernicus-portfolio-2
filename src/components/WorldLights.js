@@ -7,37 +7,30 @@ export class WorldLights extends ECS.Component {
 
         super( parent )
 
+        this.shadowResolution = 1024 * 2
+        this.shadowSpread     = 1
+
         this.Camera = this.Parent.Camera
         this.Scene  = this.Parent.Scene
 
-        var hemiLight = new THREE.HemisphereLight( 0xffffff, 0xffffff, 0.6 )
-            hemiLight.color.setHSL( 0.6, 0.75, 0.5 )
-            hemiLight.groundColor.setHSL( 0.095, 0.5, 0.5 )
-            hemiLight.position.set( 0, 500, 0 )
+        this.Light = new THREE.DirectionalLight( 0xffffff, 1 )
+        this.Light.position.set( -0.25, 0.5, 1 )
+        this.Light.position.multiplyScalar( 1 )
 
-        this.Scene.add( hemiLight );
+        this.Camera.add( this.Light );
 
-            var dirLight = new THREE.DirectionalLight( 0xffffff, 0.6 )
-            dirLight.position.set( -1, 0.75, 1 )
-            dirLight.position.multiplyScalar( 50 )
-            dirLight.name = "dirlight"
-            // dirLight.shadowCameraVisible = true;
+        this.Light.castShadow = true
 
-        this.Camera.add( dirLight );
+        this.Light.shadow.mapSize.width  = this.shadowResolution
+        this.Light.shadow.mapSize.height = this.shadowResolution
 
-            // dirLight.castShadow = true;
-            // dirLight.shadowMap.width = dirLight.shadowMapHeight = 1024*2;
+        this.Light.shadow.camera.left   = -this.shadowSpread
+        this.Light.shadow.camera.right  = this.shadowSpread
+        this.Light.shadow.camera.top    = this.shadowSpread
+        this.Light.shadow.camera.bottom = -this.shadowSpread
 
-            // var d = 300;
-
-            // dirLight.shadowCameraLeft = -d;
-            // dirLight.shadowCameraRight = d;
-            // dirLight.shadowCameraTop = d;
-            // dirLight.shadowCameraBottom = -d;
-
-            // dirLight.shadowCameraFar = 3500;
-            // dirLight.shadowBias = -0.0001;
-            // dirLight.shadowDarkness = 0.35;
+        this.Light.shadow.camera.far  = 2
+        this.Light.shadow.camera.near = 0.01
 
     }
 

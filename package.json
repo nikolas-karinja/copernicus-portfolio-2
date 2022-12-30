@@ -19,6 +19,8 @@
   "devDependencies": {
     "@nikolas.karinja/app-utils": "^0.3.23",
     "@nikolas.karinja/ecs": "^0.2.15",
+    "chroma-js": "^2.4.2",
+    "es6-tween": "^5.5.11",
     "simplex-noise": "^4.0.1",
     "three": "^0.148.0"
   }

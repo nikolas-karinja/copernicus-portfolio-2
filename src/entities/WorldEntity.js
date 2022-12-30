@@ -39,13 +39,15 @@ export class WorldEntity extends ECS.Entity {
     initRenderer () {
 
         this.Renderer = ThreeUtils.buildRenderer( 'World', this.Parent )
+        this.Renderer.outputEncoding = THREE.sRGBEncoding
+        this.Renderer.gammaOutput    = 2.2
+        this.Renderer.shadowMap.enabled = true
 
     }
 
     initScene () {
 
         this.Scene = new THREE.Scene()
-        this.Scene.background = new THREE.Color( 0xFF3C3C )
 
     }
 
