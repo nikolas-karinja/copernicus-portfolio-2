@@ -19,7 +19,7 @@ export class WorldTrees extends ECS.Component {
         this.WorldNoise = this.Parent.getComponent( 'WorldNoise' )
 
         this.Colors = {
-            treeTrunk : '#764114',
+            treeTrunk : 0x764114,
             
             Body: {
                 'grassland' : [ 0x476b00, 0x5a8700, 0x9fbf00, 0xbfb200, 0xbf7f00 ],

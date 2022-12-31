@@ -85,7 +85,7 @@ nav-bar {
 
                 margin: 0px 32px 8px 16px;
 
-                color: black;
+                color: cyan;
 
             }
 
@@ -107,5 +107,32 @@ world {
     background: radial-gradient(circle,#73aad6,#003962,#000);
 
     z-index: 2;
+
+    & world-label {
+
+        height: 32px;
+
+        background: rgba( black, 0.5 );
+        border-radius: 8px;
+        color: white;
+        font-family: 'button';
+        font-size: 20px;
+        letter-spacing: 1px;
+        line-height: 32px;
+        padding: 0px 8px 0px 8px;
+        transition: background 0.5s ease, color 0.5s ease, letter-spacing 0.5s ease, padding 0.5s ease;
+
+        cursor: pointer;
+
+        &:hover {
+
+            background: rgba( black, 0.75 );
+            color: cyan;
+            letter-spacing: 4px;
+            padding: 0px 16px 0px 16px;
+
+        }
+ 
+    }
 
 }

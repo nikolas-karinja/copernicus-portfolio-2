@@ -8,6 +8,7 @@ import { WorldEntity } from './entities/WorldEntity.js'
 // components
 
 import { WorldControls } from './components/WorldControls.js'
+import { WorldLabelRenderer } from './components/WorldLabelRender.js'
 import { WorldLights } from './components/WorldLights.js'
 import { WorldMesh } from './components/WorldMesh.js'
 import { WorldNoise } from './components/WorldNoise.js'
@@ -52,6 +53,7 @@ export class App extends AppUtils.Apps.BasicThreeApp {
             entity.addComponent( WorldVertexColors )
             entity.addComponent( WorldWater )
             entity.addComponent( WorldTrees )
+            entity.addComponent( WorldLabelRenderer )
 
             this.World = entity
 
@@ -69,7 +71,12 @@ export class App extends AppUtils.Apps.BasicThreeApp {
 
     resize () {
 
-        if ( this.World ) this.World.resize()
+        if ( this.World ) {
+
+            this.World.resize()
+            this.World.getComponent( 'WorldLabelRenderer' ).resize()
+
+        }
 
     }
 
