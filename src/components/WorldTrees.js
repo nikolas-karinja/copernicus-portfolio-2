@@ -61,10 +61,11 @@ export class WorldTrees extends ECS.Component {
     
             this.WorldMesh.add( TreeObject )
 
-            new TWEEN.Tween( TreeObject.scale )
+            const T = new TWEEN.Tween( TreeObject.scale )
                 .to( { x: 1, y: 1, z: 1 }, 1000 )
                 .easing( TWEEN.Easing.Elastic.Out )
                 .delay( 500 + ( count * 2 ) )
+                .onComplete( () => TWEEN.remove( T ) )
                 .start()
             
         }
