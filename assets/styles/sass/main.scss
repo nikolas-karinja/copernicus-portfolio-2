@@ -81,6 +81,12 @@ nav-bar {
 
             cursor: pointer;
 
+            &[ selected ] {
+
+                color: gold;
+
+            }
+
             &:hover {
 
                 margin: 0px 32px 8px 16px;
@@ -107,6 +113,80 @@ world {
     background: radial-gradient(circle,#73aad6,#003962,#000);
 
     z-index: 2;
+
+    & canvas {
+
+        transition: 1s ease;
+
+    }
+
+    & page-desc {
+
+        position: absolute;
+        left: 50vw;
+        top: 50vh;
+
+        width: 324px;
+        height: 480px;
+
+        margin: auto;
+
+        background: rgba( black, 0.75 );
+        border-radius: 16px;
+        display: inline-block;
+        transform: translate( -50%, -50% );
+
+        z-index: 5;
+
+        & btn-holder {
+
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+
+            width: calc( 100% - 16px );
+            height: 56px;
+
+            margin: 0px 0px 8px 8px;
+
+            display: flex;
+
+            & button {
+
+                height: 40px;
+    
+                margin: auto;
+    
+                background: #424242;
+                border: none;
+                border-radius: 8px;
+                color: white;
+                font-family: 'button';
+                font-size: 24px;
+                padding: 0px 16px 0px 16px;
+                transition: 0.5s ease;
+
+                cursor: pointer;
+    
+                &[ go ] {
+    
+                    background: green;
+    
+                }
+
+                &:hover {
+
+                    background: cyan;
+                    color: grey;
+                    letter-spacing: 1px;
+
+                }
+    
+            }
+
+        }
+
+    }
 
     & world-label {
 

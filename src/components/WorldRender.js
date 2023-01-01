@@ -1,11 +1,12 @@
 import * as ECS from '@nikolas.karinja/ecs'
-import * as THREE from 'three'
 
 export class WorldRender extends ECS.Component {
 
     constructor ( parent ) {
 
         super( parent )
+
+        this.isPaused = false
 
         this.Camera   = this.Parent.Camera
         this.Renderer = this.Parent.Renderer
@@ -15,7 +16,7 @@ export class WorldRender extends ECS.Component {
 
     onUpdate () {
 
-        this.Renderer.render( this.Scene, this.Camera )
+        if ( !this.isPaused ) this.Renderer.render( this.Scene, this.Camera )
 
     }
 

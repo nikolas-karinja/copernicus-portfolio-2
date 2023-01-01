@@ -1,6 +1,8 @@
 import * as AppUtils from '@nikolas.karinja/app-utils'
+import * as Database from './constants/database.js'
 import * as ECS from '@nikolas.karinja/ecs'
 import * as Elements from './constants/elements.js'
+import * as FileUtils from './utils/files.js'
 import * as ThreeC from './constants/three.js'
 import * as TWEEN from './libs/tween.js'
 import { WorldEntity } from './entities/WorldEntity.js'
@@ -27,18 +29,6 @@ export class App extends AppUtils.Apps.BasicThreeApp {
         this.Elements   = Elements
         this.Three      = ThreeC
 
-        this.init()
-
-    }
-
-    init () {
-
-        this.initAssemblies()
-
-        this.ECSManager.assemble( 'World', WorldEntity, {} )
-
-        window.addEventListener( 'resize', () => this.resize() )
-
     }
 
     initAssemblies () {
@@ -48,10 +38,10 @@ export class App extends AppUtils.Apps.BasicThreeApp {
             entity.addComponent( WorldMesh, entity.Scene )
             entity.addComponent( WorldNoise )
             entity.addComponent( WorldRender )
+            entity.addComponent( WorldWater )
             entity.addComponent( WorldControls )
             entity.addComponent( WorldLights )
             entity.addComponent( WorldVertexColors )
-            entity.addComponent( WorldWater )
             entity.addComponent( WorldTrees )
             entity.addComponent( WorldLabelRenderer )
 
@@ -61,11 +51,49 @@ export class App extends AppUtils.Apps.BasicThreeApp {
 
     }
 
+    async initDatabase () {
+
+        Database.Data.WorldLinks = await FileUtils.getDataFromJSON( './src/db/world-links.json' )
+
+    }
+
+    initDOMEvents () {
+
+        for ( let b of Elements.NavBar.querySelectorAll( 'nav-btn' ) ) {
+
+            b.addEventListener( 'pointerup', ( e ) => {
+     
+                for ( let bb of Elements.NavBar.querySelectorAll( 'nav-btn' ) ) {
+
+                    if ( bb.hasAttribute( 'selected' ) ) bb.removeAttribute( 'selected' )
+
+                }
+
+                e.target.setAttribute( 'selected', '' )
+      
+            } )
+
+        }
+
+        window.addEventListener( 'resize', () => this.resize() )
+
+    }
+
     onUpdate ( dT, eT, uA ) {
 
         TWEEN.update( this.Time.frame )
 
         this.ECSManager.update( dT, eT, uA )
+
+    }
+
+    async onStart () {
+
+        await this.initDatabase()
+        this.initAssemblies()
+        this.initDOMEvents()
+
+        this.ECSManager.assemble( 'World', WorldEntity, {} )
 
     }
 

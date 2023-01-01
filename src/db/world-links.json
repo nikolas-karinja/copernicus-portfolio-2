@@ -1,0 +1,26 @@
+{
+    "list": [
+        {
+            "name"  : "Experience",
+            "icon"  : "./assets/img/icons/experience-32.png",
+            "info"  : "Go here to see what I have done to advance my career and personal life.",
+            "type"  : "page",
+            "value" : "experience"
+        },
+        {
+            "name"  : "Projects",
+            "type"  : "page",
+            "value" : "projects"
+        },
+        {
+            "name"  : "Demos",
+            "type"  : "page",
+            "value" : "demos"
+        },
+        {
+            "name"  : "Me",
+            "type"  : "page",
+            "value" : "me"
+        }
+    ]
+}
