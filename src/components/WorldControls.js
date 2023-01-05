@@ -12,6 +12,7 @@ export class WorldControls extends ECS.Component {
 
         this.outScale = 3
         this.moving   = false
+        this.wdpTop   = 150
 
         this.Camera   = this.Parent.Camera
         this.Renderer = this.Parent.Renderer
@@ -126,10 +127,18 @@ export class WorldControls extends ECS.Component {
 
                 } else {
 
+                    Elements.WorldPageDesc.style.setProperty( 'display', 'inline-block' )
+
                     this.WorldRender.isPaused = true
 
                     Elements.World.querySelector( 'canvas' ).style.setProperty( 'filter', 'blur(8px)' )
                     Elements.World.querySelector( 'div#label-renderer' ).style.setProperty( 'filter', 'blur(8px)' )
+                    
+                    const T2 = new TWEEN.Tween( this )
+                        .to( { wdpTop: 50 }, 1000 )
+                        .easing( TWEEN.Easing.Quintic.Out )
+                        .onUpdate( () => Elements.WorldPageDesc.style.top = `${ this.wdpTop }vh` )
+                        .start()
 
                 }
                 

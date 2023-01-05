@@ -124,16 +124,17 @@ world {
 
         position: absolute;
         left: 50vw;
-        top: 50vh;
+        top: 150vh;
 
         width: 324px;
         height: 480px;
 
         margin: auto;
 
+        // animation: center-to-up-in 1s ease-out forwards;
         background: rgba( black, 0.75 );
         border-radius: 16px;
-        display: inline-block;
+        display: none;
         transform: translate( -50%, -50% );
 
         z-index: 5;
@@ -145,24 +146,25 @@ world {
             bottom: 0px;
 
             width: calc( 100% - 16px );
-            height: 56px;
+            height: 40px;
 
             margin: 0px 0px 8px 8px;
 
+            align-items: center;
             display: flex;
+            gap: 8px;
+            justify-content: center;
 
             & button {
 
-                height: 40px;
-    
-                margin: auto;
+                height: 32px;
     
                 background: #424242;
                 border: none;
                 border-radius: 8px;
                 color: white;
                 font-family: 'button';
-                font-size: 24px;
+                font-size: 20px;
                 padding: 0px 16px 0px 16px;
                 transition: 0.5s ease;
 
@@ -213,6 +215,34 @@ world {
 
         }
  
+    }
+
+}
+
+@keyframes center-to-down-out {
+
+    from {
+
+        top: 50vh;
+
+    } to {
+
+        top: 150vh;
+
+    }
+
+}
+
+@keyframes center-to-up-in {
+
+    from {
+
+        top: 150vh;
+
+    } to {
+
+        top: 50vh;
+
     }
 
 }
