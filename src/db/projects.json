@@ -1,0 +1,16 @@
+{
+    "languages": [
+        {
+            "name": "JavaScript",
+            "icon": "/assets/img/icons/javascript-logo.png"
+        },
+        {
+            "name": "C++",
+            "icon": "/assets/img/icons/cpp-logo.png"
+        },
+        {
+            "name": "Visual Basic",
+            "icon": "/assets/img/icons/vb-logo.png"
+        }
+    ]
+}

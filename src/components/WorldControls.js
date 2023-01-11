@@ -50,6 +50,22 @@ export class WorldControls extends ECS.Component {
 
     }
 
+    initComponent () {
+
+        this.initDOMEvents()
+
+    }
+
+    initDOMEvents () {
+
+        Elements.WorldPageDescExit.addEventListener( 'pointerup', () => {
+
+            this.exitPageDesc()
+
+        } )
+
+    }
+
     onUpdate () {
 
         if ( !this.moving ) {
@@ -127,6 +143,8 @@ export class WorldControls extends ECS.Component {
 
                 } else {
 
+                    this.setLabelPointerEvents( 'none' )
+
                     Elements.WorldPageDesc.style.setProperty( 'display', 'inline-block' )
 
                     this.WorldRender.isPaused = true
@@ -145,6 +163,39 @@ export class WorldControls extends ECS.Component {
                 TWEEN.remove( T1 )
             
             } )
+            .start()
+
+    }
+
+    setLabelPointerEvents ( value ) {
+
+        for ( let e of Elements.World.querySelectorAll( 'div#label-renderer world-label' ) ) {
+
+            e.style.setProperty( 'pointer-events', value )
+
+        }
+
+    }
+
+    exitPageDesc () {
+
+        this.setLabelPointerEvents( 'all' )
+
+        this.WorldRender.isPaused = false
+
+        this.Controls.autoRotate   = true
+        this.Controls.enableRotate = true
+
+        this.moving = false
+
+        Elements.World.querySelector( 'canvas' ).style.setProperty( 'filter', 'none' )
+        Elements.World.querySelector( 'div#label-renderer' ).style.setProperty( 'filter', 'none' )
+                    
+        const T2 = new TWEEN.Tween( this )
+            .to( { wdpTop: 150 }, 1000 )
+            .easing( TWEEN.Easing.Quintic.Out )
+            .onUpdate( () => Elements.WorldPageDesc.style.top = `${ this.wdpTop }vh` )
+            .onComplete( () => Elements.WorldPageDesc.style.setProperty( 'display', 'none' ) )
             .start()
 
     }

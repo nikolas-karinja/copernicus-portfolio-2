@@ -2,6 +2,7 @@ import * as AppUtils from '@nikolas.karinja/app-utils'
 import * as Database from '../constants/database.js'
 import * as ECS from '@nikolas.karinja/ecs'
 import * as Elements from '../constants/elements.js'
+import * as PageUtils from '../utils/pages.js'
 import * as THREE from 'three'
 import * as TWEEN from '../libs/tween.js'
 import { CSS2DObject, CSS2DRenderer } from '../../node_modules/three/examples/jsm/renderers/CSS2DRenderer.js'
@@ -15,11 +16,11 @@ export class WorldLabelRenderer extends ECS.Component {
         this.cssObjects = []
 
         this.Element       = this.Parent.Parent
+        this.PageData      = {}
         this.WorldControls = this.getComponent( 'WorldControls' )
-        this.WorldMesh     = this.Parent.getComponent( 'WorldMesh' )
-        this.WorldNoise    = this.Parent.getComponent( 'WorldNoise' )
-
-        console.log( Database.Data )
+        this.WorldMesh     = this.getComponent( 'WorldMesh' )
+        this.WorldNoise    = this.getComponent( 'WorldNoise' )
+        this.WorldRender   = this.getComponent( 'WorldRender' )
 
         this.labelData = Database.Data.WorldLinks.list
 
@@ -33,6 +34,10 @@ export class WorldLabelRenderer extends ECS.Component {
         // create element
 
         const Element = document.createElement( 'world-label' )
+        Element.pageData  = data
+        Element.pageIcon  = data.icon
+        Element.pageInfo  = data.info
+        Element.pageName  = data.name
         Element.pageValue = data.value
         Element.TargetVec = new THREE.Vector3( posArray[ landIndex ], posArray[ landIndex + 1 ], posArray[ landIndex + 2 ])
         Element.innerHTML = data.name
@@ -40,11 +45,17 @@ export class WorldLabelRenderer extends ECS.Component {
 
         // build events
 
-        Element.addEventListener( 'pointerup', () => {
+        Element.addEventListener( 'pointerup', ( e ) => {
+
+            Elements.WorldPageDescIcon.style.setProperty( 'background-image', `url( ${ e.target.pageIcon } )` )
+            Elements.WorldPageDescInfo.innerHTML = e.target.pageInfo
+            Elements.WorldPageDescTitle.innerHTML = e.target.pageName
 
             this.WorldControls.Controls.autoRotate = false
 
-            this.WorldControls.moveTarget( Element.TargetVec, true )
+            this.WorldControls.moveTarget( e.target.TargetVec, true )
+
+            this.PageData = e.target.pageData
 
         } )
 
@@ -71,6 +82,17 @@ export class WorldLabelRenderer extends ECS.Component {
 
         this.initRenderer()
         this.generateLabels()
+        this.initDOMEvents()
+
+    }
+
+    initDOMEvents () {
+
+        Elements.WorldPageDescGo.addEventListener( 'pointerup', () => {
+
+            PageUtils.setPage( this.PageData.name, this.PageData.value )
+
+        } )
 
     }
 
@@ -91,7 +113,7 @@ export class WorldLabelRenderer extends ECS.Component {
 
     onUpdate () {
 
-        this.Renderer.render( this.Parent.Scene, this.Parent.Camera )
+        if ( !this.WorldRender.isPaused ) this.Renderer.render( this.Parent.Scene, this.Parent.Camera )
 
     }
 
