@@ -10,7 +10,7 @@ export class JSCubeMesh extends ECS.Component {
 
         this.boxSize = 0.25
 
-        this.Texture = new THREE.TextureLoader().load( '/assets/img/icons/js-logo.png' )
+        this.Texture = new THREE.TextureLoader().load( '/assets/img/logos/dimensional-icon-1024.png' )
         this.Texture.magFilter = THREE.NearestFilter
         this.Texture.minFilter = THREE.NearestFilter
 
