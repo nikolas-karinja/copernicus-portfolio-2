@@ -72,6 +72,45 @@ export function createProjectElement ( data, projectData ) {
         GithubElement.style.setProperty( 'opacity', '0.25' )
         GithubElement.title = 'Repository is either private or not available'
 
+    } else {
+
+        GithubElement.githubURL = projectData.github
+
+        GithubElement.addEventListener( 'pointerup', ( e ) => window.open( e.target.githubURL ) )
+
+    }
+
+    //
+
+    const ProgressElement = document.createElement( 'img' )
+    ProgressElement.setAttribute( 'progress', '' )
+
+    if ( !projectData.finished ) {
+
+        ProgressElement.src   = '/assets/img/icons/wip.png'
+        ProgressElement.title = 'Work in progress'
+
+    } else {
+
+        ProgressElement.src   = '/assets/img/icons/green-checkmark.png'
+        ProgressElement.title = 'Finished'
+
+    }
+
+    //
+
+    if ( projectData.npm ) {
+
+        const NPMElement = document.createElement( 'img' )
+        NPMElement.setAttribute( 'npm', '' )
+        NPMElement.src    = '/assets/img/icons/npm-logo.png'
+        NPMElement.title  = 'Go to NPM page'
+        NPMElement.npmURL = projectData.npm
+
+        NPMElement.addEventListener( 'pointerup', ( e ) => window.open( e.target.npmURL ) )
+
+        Element.appendChild( NPMElement )
+
     }
 
     //
@@ -81,6 +120,7 @@ export function createProjectElement ( data, projectData ) {
     Element.appendChild( InfoElement )
     Element.appendChild( ElementsElement )
     Element.appendChild( GithubElement )
+    Element.appendChild( ProgressElement )
 
     document.body.querySelector( 'content' ).appendChild( Element )
 

@@ -27,17 +27,22 @@
         "three-js": {
             "name": "Three.js",
             "icon": "/assets/img/icons/threejs-logo.png"
+        },
+        "win-forms": {
+            "name": "Windows Forms",
+            "icon": "/assets/img/icons/winforms-logo.png"
         }
     },
 
     "languages": [
         {
-            "name": "JavaScript",
+            "name": "JavaScript (Web)",
             "icon": "/assets/img/icons/js-logo.png",
             "background": "/assets/img/screenshots/mountain-4.png",
             "projects": [
                 {
                     "name": "Dimensional Engine",
+                    "finished": false,
                     "github": false,
                     "elements": [ "node-js", "socket-io", "react", "three-js", "html-5", "sass" ],
                     "icon": "/assets/img/icons/dimensional-logo.png",
@@ -45,6 +50,7 @@
                 },
                 {
                     "name": "Victorum",
+                    "finished": false,
                     "github": false,
                     "elements": [ "node-js", "dimensional", "socket-io", "three-js", "html-5", "sass" ],
                     "icon": "/assets/img/icons/victorum-man-alpha.png",
@@ -52,10 +58,46 @@
                 },
                 {
                     "name": "Polyum",
+                    "finished": false,
                     "github": false,
                     "elements": [ "node-js", "dimensional", "socket-io", "three-js", "html-5", "sass" ],
                     "icon": "/assets/img/icons/polyum-people.png",
                     "info": "Simulate a community and be their sandbox overlord"
+                },
+                {
+                    "name": "@nikolas.karinja/app-utils (NPM)",
+                    "npm": "https://www.npmjs.com/package/@nikolas.karinja/app-utils",
+                    "finished": false,
+                    "github": false,
+                    "elements": [ "node-js", "three-js" ],
+                    "icon": "/assets/img/icons/npm-logo.png",
+                    "info": "The aim was to make simple concepts in JavaScript take even less time to implement"
+                },
+                {
+                    "name": "@nikolas.karinja/ecs (NPM)",
+                    "npm": "https://www.npmjs.com/package/@nikolas.karinja/ecs",
+                    "finished": true,
+                    "github": false,
+                    "elements": [ "node-js" ],
+                    "icon": "/assets/img/icons/npm-logo.png",
+                    "info": "A very simple yet dynamic way of handling entities and components"
+                },
+                {
+                    "name": "@nikolas.karinja/logger (NPM)",
+                    "npm": "https://www.npmjs.com/package/@nikolas.karinja/logger",
+                    "finished": false,
+                    "github": false,
+                    "elements": [ "node-js" ],
+                    "icon": "/assets/img/icons/npm-logo.png",
+                    "info": "A very simple yet dynamic way of handling console logging"
+                },
+                {
+                    "name": "CS3 Simple Website (SMC)",
+                    "finished": true,
+                    "github": "https://github.com/nikolas-karinja/SMC-CS3-Assignment-4",
+                    "elements": [ "html-5", "sass" ],
+                    "icon": "/assets/img/icons/js-logo.png",
+                    "info": "A simple page about myself (college assignment)"
                 }
             ]
         },
@@ -99,7 +141,32 @@
             "name": "Visual Basic",
             "icon": "/assets/img/icons/vb-logo.png",
             "background": "/assets/img/screenshots/mountain-1.png",
-            "projects": []
+            "projects": [
+                {
+                    "name": "Name and Age",
+                    "finished": true,
+                    "github": "https://github.com/nikolas-karinja/SMC-CS3-Assignment-5",
+                    "elements": [ "win-forms" ],
+                    "icon": "/assets/img/icons/vb-logo.png",
+                    "info": "Prints your name and age"
+                },
+                {
+                    "name": "Imperial to Metric Units",
+                    "finished": true,
+                    "github": "https://github.com/nikolas-karinja/SMC-CS3-Assignment-6",
+                    "elements": [ "win-forms" ],
+                    "icon": "/assets/img/icons/vb-logo.png",
+                    "info": "Convert Imperial units to metric units"
+                },
+                {
+                    "name": "Funny Random Calculators",
+                    "finished": true,
+                    "github": "https://github.com/nikolas-karinja/SMC-CS3-Final-Project",
+                    "elements": [ "win-forms" ],
+                    "icon": "/assets/img/icons/vb-logo.png",
+                    "info": "Summation calculator, age calculator, and random numbers below 10 generator"
+                }
+            ]
         }
     ]
 }

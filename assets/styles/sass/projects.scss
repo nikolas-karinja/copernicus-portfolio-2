@@ -116,6 +116,49 @@ content {
             &[ github ] {
 
                 left: auto;
+                top: 4px;
+                right: 8px;
+
+                width: 32px;
+                height: 32px;
+
+                border-radius: 0px;
+                cursor: pointer;
+                transition: 0.5s ease;
+
+                &:hover {
+
+                    transform: scale( 1.125 ) rotate( -15deg );
+
+                }
+
+            }
+
+            &[ progress ] {
+
+                left: auto;
+                top: 40px;
+                right: 8px;
+
+                width: 32px;
+                height: 32px;
+
+                border-radius: 0px;
+                cursor: pointer;
+                transition: 0.5s ease;
+
+                &:hover {
+
+                    transform: scale( 1.125 ) rotate( -15deg );
+
+                }
+
+            }
+
+            &[ npm ] {
+
+                left: auto;
+                top: 76px;
                 right: 8px;
 
                 width: 32px;
