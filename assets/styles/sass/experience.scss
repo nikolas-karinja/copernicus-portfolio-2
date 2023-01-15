@@ -1,3 +1,10 @@
+canvas {
+
+    opacity: 0.25;
+    pointer-events: none;
+
+}
+
 content {
 
     position: absolute;
@@ -60,7 +67,8 @@ content-table {
 
 img-container {
     
-    width: calc( 100% - 32px );
+    width: auto;
+    max-width: calc( 100% - 32px );
     height: 268px;
 
     background: #161616;
@@ -83,6 +91,12 @@ img-container {
         display: inline-block;
         border-radius: 8px;
         overflow: hidden;
+
+        &:hover {
+
+            z-index: 2;
+
+        }
 
         &:last-of-type {
 
@@ -146,7 +160,7 @@ p {
 ul {
 
     color: white;
-    font-family: "text";
+    font-family: consolas;
     font-size: 18px;
 
     & li {

@@ -35,7 +35,7 @@
     background-color: cyan;    /* color of the scroll thumb */
     border-radius: 20px;       /* roundness of the scroll thumb */
     border: 3px solid transparent;  /* creates padding around scroll thumb */
-    
+
 }
 
 //
@@ -61,7 +61,38 @@ iframe#content {
     height: calc( 100vh - 64px );
 
     border: none;
+    overflow: hidden;
     transition: height 0.5s ease;
+
+}
+
+me-low-poly {
+
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+
+    width: 128px;
+    height: 128px;
+
+    background-image: url( "/assets/img/icons/me-head-right-2048.png" );
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    background-size: 128px 128px;
+    cursor: pointer;
+    opacity: 0.75;
+    transform: scaleX( -1 );
+    transition: 0.15s ease;
+
+    z-index: 4;
+
+    &:hover {
+
+        margin-right: 8px;
+
+        opacity: 1;
+
+    }
 
 }
 
