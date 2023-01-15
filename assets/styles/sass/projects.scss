@@ -4,18 +4,22 @@ content {
     left: 276px;
     top: 96px;
 
-    width: calc( ( 100vw - 276px ) - 48px );
+    width: calc( ( 100vw - 276px ) - 32px );
     height: calc( 100vh - 112px );
 
-    animation: slide 1s ease-out forwards;
+    background-image: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: white;
     font-family: "text";
     font-size: 18px;
     line-height: inherit;
     overflow-x: hidden;
     overflow-y: auto;
-    padding: 16px 16px 0px 32px;
+    padding: 16px 16px 0px 16px;
     text-align: center;
+    transition: background-image 1s ease;
 
     & project {
 

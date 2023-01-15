@@ -20,6 +20,7 @@ async function setProjectLanguage ( name ) {
 
         if ( l.name == name ) {
 
+            // document.body.querySelector( 'content' ).style.setProperty( 'background-image', `url( ${ l.background } )` )
             document.body.querySelector( 'content' ).innerHTML = ''
 
             document.body.querySelector( 'heading h1' ).style.setProperty( 'display', 'none' )

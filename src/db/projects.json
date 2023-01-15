@@ -34,6 +34,7 @@
         {
             "name": "JavaScript",
             "icon": "/assets/img/icons/js-logo.png",
+            "background": "/assets/img/screenshots/mountain-4.png",
             "projects": [
                 {
                     "name": "Dimensional Engine",
@@ -59,13 +60,45 @@
             ]
         },
         {
+            "name": "C#",
+            "icon": "/assets/img/icons/csharp-logo.png",
+            "background": "/assets/img/screenshots/mountain-8.png",
+            "projects": []
+        },
+        {
             "name": "C++",
             "icon": "/assets/img/icons/cpp-logo.png",
+            "background": "/assets/img/screenshots/mountain-8.png",
+            "projects": []
+        },
+        {
+            "name": "C",
+            "icon": "/assets/img/icons/c-logo.png",
+            "background": "/assets/img/screenshots/mountain-8.png",
+            "projects": []
+        },
+        {
+            "name": "Lua",
+            "icon": "/assets/img/icons/lua-logo.png",
+            "background": "/assets/img/screenshots/mountain-8.png",
+            "projects": []
+        },
+        {
+            "name": "Java",
+            "icon": "/assets/img/icons/java-logo.png",
+            "background": "/assets/img/screenshots/mountain-8.png",
+            "projects": []
+        },
+        {
+            "name": "Assembly",
+            "icon": "/assets/img/icons/assembly-logo.png",
+            "background": "/assets/img/screenshots/mountain-8.png",
             "projects": []
         },
         {
             "name": "Visual Basic",
             "icon": "/assets/img/icons/vb-logo.png",
+            "background": "/assets/img/screenshots/mountain-1.png",
             "projects": []
         }
     ]
