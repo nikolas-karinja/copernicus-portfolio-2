@@ -2,28 +2,28 @@
     "list": [
         {
             "name"  : "Experience",
-            "icon"  : "assets/img/icons/books-colored-32.png",
+            "icon"  : "../../assets/img/icons/books-colored-32.png",
             "info"  : "Go here to see what I have done to advance my career and personal life in regards to my work.",
             "type"  : "page",
             "value" : "experience"
         },
         {
             "name"  : "Projects",
-            "icon"  : "assets/img/icons/books-colored-32.png",
+            "icon"  : "../../assets/img/icons/books-colored-32.png",
             "info"  : "Go here to see some projects I am currently working on. Most of these are currently in development, while some are completely finished and being updated.",
             "type"  : "page",
             "value" : "projects"
         },
         {
             "name"  : "Web Demos",
-            "icon"  : "assets/img/icons/books-colored-32.png",
+            "icon"  : "../../assets/img/icons/books-colored-32.png",
             "info"  : "Go here to see some examples and demos I have made from my knowledge and experience in the field of Computer Science.",
             "type"  : "page",
             "value" : "demos"
         },
         {
             "name"  : "Me",
-            "icon"  : "assets/img/icons/books-colored-32.png",
+            "icon"  : "../../assets/img/icons/books-colored-32.png",
             "info"  : "Go here to see some basic and interesting info about me as a person and what I am truly all about.",
             "type"  : "page",
             "value" : "me"
