@@ -200,7 +200,7 @@ export function setPage ( title, htmlFileName ) {
 
     Elements.Title.innerHTML = `Nikolas Karinja - ${ title }`
 
-    Elements.Content.setAttribute( 'src', `/assets/pages/${ htmlFileName }.html` )
+    Elements.Content.setAttribute( 'src', `assets/pages/${ htmlFileName }.html` )
 
     for ( let b of Elements.NavBar.querySelectorAll( 'nav-btn' ) ) {
 
