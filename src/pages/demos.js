@@ -17,7 +17,7 @@ async function createDemoElements () {
 
 //
 
-const CodeElements = await FileUtils.getDataFromJSON( '/src/db/code-elements.json' )
-const Data         = await FileUtils.getDataFromJSON( '/src/db/demos.json' )
+const CodeElements = await FileUtils.getDataFromJSON( '../../src/db/code-elements.json' )
+const Data         = await FileUtils.getDataFromJSON( '../../src/db/demos.json' )
 
 await createDemoElements()

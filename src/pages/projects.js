@@ -53,8 +53,8 @@ async function setProjectLanguage ( name ) {
 
 //
 
-const CodeElements = await FileUtils.getDataFromJSON( '/src/db/code-elements.json' )
-const Data         = await FileUtils.getDataFromJSON( '/src/db/projects.json' )
+const CodeElements = await FileUtils.getDataFromJSON( '../../src/db/code-elements.json' )
+const Data         = await FileUtils.getDataFromJSON( '../../src/db/projects.json' )
 
 await createIndexButtons()
 await setProjectLanguage( Data.languages[ 0 ].name )

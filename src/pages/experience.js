@@ -1,17 +1,17 @@
 import * as AppUtils from '@nikolas.karinja/app-utils'
-import * as Database from '/src/constants/database.js'
+import * as Database from '../constants/database.js'
 import * as ECS from '@nikolas.karinja/ecs'
-import * as Elements from '/src/constants/elements.js'
-import * as FileUtils from '/src/utils/files.js'
-import * as ThreeC from '/src/constants/three.js'
-import * as TWEEN from '/src/libs/tween.js'
-import { JSCubeEntity } from '/src/entities/JSCubeEntity.js'
+import * as Elements from '../constants/elements.js'
+import * as FileUtils from '../utils/files.js'
+import * as ThreeC from '../constants/three.js'
+import * as TWEEN from '../libs/tween.js'
+import { JSCubeEntity } from '../entities/JSCubeEntity.js'
 
 // components
 
-import { JSCubeLights } from '/src/components/JSCubeLights.js'
-import { JSCubeMesh } from '/src/components/JSCubeMesh.js'
-import { JSCubeRender } from '/src/components/JSCubeRender.js'
+import { JSCubeLights } from '../components/JSCubeLights.js'
+import { JSCubeMesh } from '../components/JSCubeMesh.js'
+import { JSCubeRender } from '../components/JSCubeRender.js'
 
 AppUtils.Apps.startApp( class App extends AppUtils.Apps.BasicThreeApp {
 
@@ -41,7 +41,7 @@ AppUtils.Apps.startApp( class App extends AppUtils.Apps.BasicThreeApp {
 
     async initDatabase () {
 
-        Database.Data.WorldLinks = await FileUtils.getDataFromJSON( '/src/db/world-links.json' )
+        Database.Data.WorldLinks = await FileUtils.getDataFromJSON( '../../src/db/world-links.json' )
 
     }
 
