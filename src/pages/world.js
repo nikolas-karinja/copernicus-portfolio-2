@@ -53,7 +53,7 @@ AppUtils.Apps.startApp( class App extends AppUtils.Apps.BasicThreeApp {
 
     async initDatabase () {
 
-        Database.Data.WorldLinks = await FileUtils.getDataFromJSON( '../db/world-links.json' )
+        Database.Data.WorldLinks = await FileUtils.getDataFromJSON( '../../src/db/world-links.json' )
 
     }
 
