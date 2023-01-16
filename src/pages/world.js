@@ -86,7 +86,7 @@ AppUtils.Apps.startApp( class App extends AppUtils.Apps.BasicThreeApp {
         if ( this.World ) {
 
             this.World.resize()
-            // this.World.getComponent( 'WorldLabelRenderer' ).resize()
+            this.World.getComponent( 'WorldLabelRenderer' ).resize()
 
         }
 
