@@ -50,7 +50,7 @@
                 {
                     "name": "@nikolas.karinja/logger (NPM)",
                     "npm": "https://www.npmjs.com/package/@nikolas.karinja/logger",
-                    "finished": false,
+                    "finished": true,
                     "github": false,
                     "elements": [ "node-js" ],
                     "icon": "../../assets/img/icons/npm-logo.png",
