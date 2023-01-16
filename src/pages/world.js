@@ -45,8 +45,6 @@ AppUtils.Apps.startApp( class App extends AppUtils.Apps.BasicThreeApp {
             entity.addComponent( WorldTrees )
             entity.addComponent( WorldLabelRenderer )
 
-            console.log( entity )
-
             this.World = entity
 
         } )
