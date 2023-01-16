@@ -1,0 +1,22 @@
+World
+- [x] build globe mesh that is affected by noise
+- [x] make terrain with biomes and poles
+- [x] trees spawn around the globe and point outwards
+- [x] add labels that are linked to different pages
+- [] have randomly generated cities appear around the globe
+- [] make trees be InstancedMesh for better performance
+- [] make it so that world-generation is as multi-threaded as possible
+- [] add interactions with globe (maybe some natural disasters)
+
+Projects
+- [] give every project a github repo link (public projects)
+- [] have at least 3 projects for every language
+    - [x] js
+    - [] c#
+    - [] c++
+    - [] c
+    - [] lua
+    - [] java
+    - [] asm
+    - [x] vb
+- [] give web pages for all javascript projects (on click)
