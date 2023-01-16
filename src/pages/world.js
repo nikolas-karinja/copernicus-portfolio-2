@@ -1,23 +1,23 @@
 import * as AppUtils from '@nikolas.karinja/app-utils'
-import * as Database from '/src/constants/database.js'
+import * as Database from '../constants/database.js'
 import * as ECS from '@nikolas.karinja/ecs'
-import * as Elements from '/src/constants/elements.js'
-import * as FileUtils from '/src/utils/files.js'
-import * as ThreeC from '/src/constants/three.js'
-import * as TWEEN from '/src/libs/tween.js'
-import { WorldEntity } from '/src/entities/WorldEntity.js'
+import * as Elements from '../constants/elements.js'
+import * as FileUtils from '../utils/files.js'
+import * as ThreeC from '../constants/three.js'
+import * as TWEEN from '../libs/tween.js'
+import { WorldEntity } from '../entities/WorldEntity.js'
 
 // components
 
-import { WorldControls } from '/src/components/WorldControls.js'
-import { WorldLabelRenderer } from '/src/components/WorldLabelRender.js'
-import { WorldLights } from '/src/components/WorldLights.js'
-import { WorldMesh } from '/src/components/WorldMesh.js'
-import { WorldNoise } from '/src/components/WorldNoise.js'
-import { WorldRender } from '/src/components/WorldRender.js'
-import { WorldTrees } from '/src/components/WorldTrees.js'
-import { WorldVertexColors } from '/src/components/WorldVertexColors.js'
-import { WorldWater } from '/src/components/WorldWater.js'
+import { WorldControls } from '../components/WorldControls.js'
+import { WorldLabelRenderer } from '../components/WorldLabelRender.js'
+import { WorldLights } from '../components/WorldLights.js'
+import { WorldMesh } from '../components/WorldMesh.js'
+import { WorldNoise } from '../components/WorldNoise.js'
+import { WorldRender } from '../components/WorldRender.js'
+import { WorldTrees } from '../components/WorldTrees.js'
+import { WorldVertexColors } from '../components/WorldVertexColors.js'
+import { WorldWater } from '../components/WorldWater.js'
 
 AppUtils.Apps.startApp( class App extends AppUtils.Apps.BasicThreeApp {
 
@@ -53,7 +53,7 @@ AppUtils.Apps.startApp( class App extends AppUtils.Apps.BasicThreeApp {
 
     async initDatabase () {
 
-        Database.Data.WorldLinks = await FileUtils.getDataFromJSON( '/src/db/world-links.json' )
+        Database.Data.WorldLinks = await FileUtils.getDataFromJSON( '../db/world-links.json' )
 
     }
 
