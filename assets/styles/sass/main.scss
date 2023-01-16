@@ -1,20 +1,20 @@
 @font-face {
 
     font-family: "title";
-    src: url( "assets/fonts/UberMoveBold.otf" );
+    src: url( "../fonts/UberMoveBold.otf" );
 
 }
 
 @font-face {
 
     font-family: "button";
-    src: url( "assets/fonts/UberMoveMedium.otf" );
+    src: url( "../fonts/UberMoveMedium.otf" );
 
 }
 
 @font-face {
     font-family: "text";
-    src: url( "assets/fonts/Montserrat-VariableFont_wght.ttf" );
+    src: url( "../fonts/Montserrat-VariableFont_wght.ttf" );
 }
 
 *::-webkit-scrollbar {
@@ -288,7 +288,7 @@ me-low-poly {
     width: 128px;
     height: 128px;
 
-    background-image: url( "assets/img/icons/me-head-right-2048.png" );
+    background-image: url( "../img/icons/me-head-right-2048.png" );
     background-position: 0px 0px;
     background-repeat: no-repeat;
     background-size: 128px 128px;
