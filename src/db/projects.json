@@ -2,15 +2,15 @@
     "languages": [
         {
             "name": "JavaScript (Web)",
-            "icon": "/assets/img/icons/js-logo.png",
-            "background": "/assets/img/screenshots/mountain-4.png",
+            "icon": "assets/img/icons/js-logo.png",
+            "background": "assets/img/screenshots/mountain-4.png",
             "projects": [
                 {
                     "name": "Dimensional Engine",
                     "finished": false,
                     "github": false,
                     "elements": [ "node-js", "socket-io", "react", "three-js", "html-5", "sass" ],
-                    "icon": "/assets/img/icons/dimensional-logo.png",
+                    "icon": "assets/img/icons/dimensional-logo.png",
                     "info": "A JavaScript 3D game engine inspired by Unity"
                 },
                 {
@@ -18,7 +18,7 @@
                     "finished": false,
                     "github": false,
                     "elements": [ "node-js", "dimensional", "socket-io", "three-js", "html-5", "sass" ],
-                    "icon": "/assets/img/icons/victorum-man-alpha.png",
+                    "icon": "assets/img/icons/victorum-man-alpha.png",
                     "info": "A Grand-Strategy game about the Age of Colonization"
                 },
                 {
@@ -26,7 +26,7 @@
                     "finished": false,
                     "github": false,
                     "elements": [ "node-js", "dimensional", "socket-io", "three-js", "html-5", "sass" ],
-                    "icon": "/assets/img/icons/polyum-people.png",
+                    "icon": "assets/img/icons/polyum-people.png",
                     "info": "Simulate a community and be their sandbox overlord"
                 },
                 {
@@ -35,7 +35,7 @@
                     "finished": false,
                     "github": false,
                     "elements": [ "node-js", "three-js" ],
-                    "icon": "/assets/img/icons/npm-logo.png",
+                    "icon": "assets/img/icons/npm-logo.png",
                     "info": "The aim was to make simple concepts in JavaScript take even less time to implement"
                 },
                 {
@@ -44,7 +44,7 @@
                     "finished": true,
                     "github": false,
                     "elements": [ "node-js" ],
-                    "icon": "/assets/img/icons/npm-logo.png",
+                    "icon": "assets/img/icons/npm-logo.png",
                     "info": "A very simple yet dynamic way of handling entities and components"
                 },
                 {
@@ -53,7 +53,7 @@
                     "finished": false,
                     "github": false,
                     "elements": [ "node-js" ],
-                    "icon": "/assets/img/icons/npm-logo.png",
+                    "icon": "assets/img/icons/npm-logo.png",
                     "info": "A very simple yet dynamic way of handling console logging"
                 },
                 {
@@ -61,58 +61,58 @@
                     "finished": true,
                     "github": "https://github.com/nikolas-karinja/SMC-CS3-Assignment-4",
                     "elements": [ "html-5", "sass" ],
-                    "icon": "/assets/img/icons/js-logo.png",
+                    "icon": "assets/img/icons/js-logo.png",
                     "info": "A simple page about myself (college assignment)"
                 }
             ]
         },
         {
             "name": "C#",
-            "icon": "/assets/img/icons/csharp-logo.png",
-            "background": "/assets/img/screenshots/mountain-8.png",
+            "icon": "assets/img/icons/csharp-logo.png",
+            "background": "assets/img/screenshots/mountain-8.png",
             "projects": []
         },
         {
             "name": "C++",
-            "icon": "/assets/img/icons/cpp-logo.png",
-            "background": "/assets/img/screenshots/mountain-8.png",
+            "icon": "assets/img/icons/cpp-logo.png",
+            "background": "assets/img/screenshots/mountain-8.png",
             "projects": []
         },
         {
             "name": "C",
-            "icon": "/assets/img/icons/c-logo.png",
-            "background": "/assets/img/screenshots/mountain-8.png",
+            "icon": "assets/img/icons/c-logo.png",
+            "background": "assets/img/screenshots/mountain-8.png",
             "projects": []
         },
         {
             "name": "Lua",
-            "icon": "/assets/img/icons/lua-logo.png",
-            "background": "/assets/img/screenshots/mountain-8.png",
+            "icon": "assets/img/icons/lua-logo.png",
+            "background": "assets/img/screenshots/mountain-8.png",
             "projects": []
         },
         {
             "name": "Java",
-            "icon": "/assets/img/icons/java-logo.png",
-            "background": "/assets/img/screenshots/mountain-8.png",
+            "icon": "assets/img/icons/java-logo.png",
+            "background": "assets/img/screenshots/mountain-8.png",
             "projects": []
         },
         {
             "name": "Assembly",
-            "icon": "/assets/img/icons/assembly-logo.png",
-            "background": "/assets/img/screenshots/mountain-8.png",
+            "icon": "assets/img/icons/assembly-logo.png",
+            "background": "assets/img/screenshots/mountain-8.png",
             "projects": []
         },
         {
             "name": "Visual Basic",
-            "icon": "/assets/img/icons/vb-logo.png",
-            "background": "/assets/img/screenshots/mountain-1.png",
+            "icon": "assets/img/icons/vb-logo.png",
+            "background": "assets/img/screenshots/mountain-1.png",
             "projects": [
                 {
                     "name": "Name and Age",
                     "finished": true,
                     "github": "https://github.com/nikolas-karinja/SMC-CS3-Assignment-5",
                     "elements": [ "win-forms" ],
-                    "icon": "/assets/img/icons/vb-logo.png",
+                    "icon": "assets/img/icons/vb-logo.png",
                     "info": "Prints your name and age"
                 },
                 {
@@ -120,7 +120,7 @@
                     "finished": true,
                     "github": "https://github.com/nikolas-karinja/SMC-CS3-Assignment-6",
                     "elements": [ "win-forms" ],
-                    "icon": "/assets/img/icons/vb-logo.png",
+                    "icon": "assets/img/icons/vb-logo.png",
                     "info": "Convert Imperial units to metric units"
                 },
                 {
@@ -128,7 +128,7 @@
                     "finished": true,
                     "github": "https://github.com/nikolas-karinja/SMC-CS3-Final-Project",
                     "elements": [ "win-forms" ],
-                    "icon": "/assets/img/icons/vb-logo.png",
+                    "icon": "assets/img/icons/vb-logo.png",
                     "info": "Summation calculator, age calculator, and random numbers below 10 generator"
                 }
             ]
