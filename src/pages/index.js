@@ -1,5 +1,5 @@
-import * as Elements from '/src/constants/elements.js'
-import * as PageUtils from '/src/utils/pages.js'
+import * as Elements from 'src/constants/elements.js'
+import * as PageUtils from 'src/utils/pages.js'
 
 for ( let b of Elements.NavBar.querySelectorAll( 'nav-btn' ) ) {
 
