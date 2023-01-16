@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Demo - Bokeh and Trees</title>
+
+        <link rel="icon" href="./Demo - Bokeh and Trees_files/dimensional-logo.png">
+        <link rel="stylesheet" href="./Demo - Bokeh and Trees_files/html.min.css" <="" head="">
+    </head><body style="margin: 0px; overflow: hidden;">
+        <div loading="">
+            <img src="./Demo - Bokeh and Trees_files/dimensional-logo.png">
+            <p engine="">Dimensional Engine</p>
+            <p text="">Loading...</p>
+        </div>
+
+        
+        
+        
+
+        <script src="./Demo - Bokeh and Trees_files/main.js.download" type="module"></script>
+    <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+<ui style="position: absolute; left: 0px; top: 0px; width: 100vw; height: 100vh; display: inline-block;"><state id="7050505f-29f7-4927-a9a8-844d04d82068" name="Rendering" style="position: absolute; left: 0px; top: 0px; width: 100vw; height: 100vh; display: inline-block; pointer-events: all; touch-action: none;"><canvas data-engine="three.js r145" width="1920" height="1023" style="display: inline-block; pointer-events: all; width: 1920px; height: 1023px;"></canvas></state><state id="1391a8af-d106-46ae-86d2-594247bf4c4f" name="Interface" style="position: absolute; left: 0px; top: 0px; width: 100vw; height: 100vh; display: inline-block; pointer-events: none;"></state><state id="0b329f08-28a5-45d3-a6a0-0ee88ceb91fd" name="Dev" style="position: absolute; left: 0px; top: 0px; width: 100vw; height: 100vh; display: none; pointer-events: none;"><div style="position: absolute; left: 8px; bottom: 8px; width: 340px; height: 330px; display: inline-block; background-color: rgba(0, 0, 0, 0.75); border-radius: 4px; pointer-events: all; font-family: consolas; z-index: 9999999; overflow: hidden;"><div style="width: 100%; background-color: rgba(0, 0, 0, 0.25); height: 32px; color: white; text-align: center; line-height: 32px; font-size: 18px; font-weight: bold;">Entities</div><div style="margin: 6px 0px 6px 8px; width: calc(100% - 16px); height: 256px; display: inline-block; overflow: hidden auto; border-radius: 4px; background-color: rgba(0, 0, 0, 0.25);"><div id="ecs-5bf80a2e-09b1-4d2c-a5bf-2cf1093d0958" style="width: 100%; height: 24px; display: flex; flex-direction: row; align-items: center; justify-content: flex-start; white-space: nowrap; cursor: pointer; background-color: rgba(0, 0, 0, 0.25);"><div uuid="5bf80a2e-09b1-4d2c-a5bf-2cf1093d0958" style="width: 24px; height: 24px; color: grey; font-size: 16px; text-align: center; margin: 0px 0px 0px 8px;">✖</div><div style="color: white; margin: 0px 8px; font-size: 14px;">Light</div><div style="color: cyan; margin: 0px 8px; font-size: 12px;">5bf80a2e-09b1-4d2c-a5bf-2cf1093d0958</div></div><div id="ecs-6265e9b7-ca06-4e38-b8d3-5a7396b72c80" style="width: 100%; height: 24px; display: flex; flex-direction: row; align-items: center; justify-content: flex-start; white-space: nowrap; cursor: pointer;"><div uuid="6265e9b7-ca06-4e38-b8d3-5a7396b72c80" style="width: 24px; height: 24px; color: grey; font-size: 16px; text-align: center; margin: 0px 0px 0px 8px;">✖</div><div style="color: white; margin: 0px 8px; font-size: 14px;">Terrain</div><div style="color: cyan; margin: 0px 8px; font-size: 12px;">6265e9b7-ca06-4e38-b8d3-5a7396b72c80</div></div></div></div><div style="position: absolute; left: 8px; top: 8px; width: 340px; height: 608px; display: inline-block; background-color: rgba(0, 0, 0, 0.75); border-radius: 4px; pointer-events: all; font-family: consolas; z-index: 9999999; overflow: hidden;"><div style="width: 100%; background-color: rgba(0, 0, 0, 0.25); height: 32px; color: white; text-align: center; line-height: 32px; font-size: 18px; font-weight: bold;">Renderers</div><div style="width: 100%; height: 24px; display: flex; align-items: center; justify-content: flex-start;"><div style="color: white; margin: 0px 4px 0px 8px; font-size: 14px;">Renderer selected</div><select style="margin: 0px 4px; font-family: consolas; background-color: rgba(0, 0, 0, 0.5); border: none; height: 20px; color: white; border-radius: 4px; cursor: pointer;"><option>Main</option></select><div style="margin: 0px 4px; font-family: consolas; background-color: rgba(0, 0, 0, 0.5); border: none; width: 20px; height: 20px; color: white; border-radius: 4px; text-align: center; cursor: pointer;">↻</div></div><div style="width: 100%; height: 24px; display: flex; align-items: center; justify-content: flex-start;"><div style="color: white; margin: 0px 4px 0px 8px; font-size: 14px;">Camera selected</div><select style="margin: 0px 4px; font-family: consolas; background-color: rgba(0, 0, 0, 0.5); border: none; height: 20px; color: white; border-radius: 4px; cursor: pointer;"><option>Main</option></select><div style="margin: 0px 4px; font-family: consolas; background-color: rgba(0, 0, 0, 0.5); border: none; width: 20px; height: 20px; color: white; border-radius: 4px; text-align: center; cursor: pointer;">↻</div></div><div style="width: 100%; height: 24px; display: flex; align-items: center; justify-content: flex-start;"><div style="color: white; margin: 0px 4px 0px 8px; font-size: 14px;">Scene selected</div><select style="margin: 0px 4px; font-family: consolas; background-color: rgba(0, 0, 0, 0.5); border: none; height: 20px; color: white; border-radius: 4px; cursor: pointer;"><option>Main</option></select><div style="margin: 0px 4px; font-family: consolas; background-color: rgba(0, 0, 0, 0.5); border: none; width: 20px; height: 20px; color: white; border-radius: 4px; text-align: center; cursor: pointer;">↻</div></div><div style="margin: 6px 0px 6px 8px; width: calc(100% - 16px); height: 256px; display: inline-block; overflow: hidden auto; border-radius: 4px; background-color: rgba(0, 0, 0, 0.25);"><div style="width: 100%; height: 24px; display: flex; flex-direction: row; align-items: center; justify-content: flex-start; white-space: nowrap; cursor: pointer; background-color: rgba(0, 0, 0, 0.25);"><div uuid="54626508-012e-49be-a905-1302b6ab2a67" style="width: 24px; height: 24px; color: limegreen; font-size: 16px; margin: 0px 0px 0px 8px;">👁</div><div style="color: white; margin: 0px 8px; font-size: 14px;">Unnamed Group</div><div style="color: magenta; margin: 0px 8px 0px 4px; font-size: 12px;">Group </div><div style="color: cyan; margin: 0px 8px; font-size: 12px;">54626508-012e-49be-a905-1302b6ab2a67</div></div><div style="width: 100%; height: 24px; display: flex; flex-direction: row; align-items: center; justify-content: flex-start; white-space: nowrap; cursor: pointer;"><div uuid="3b1342fb-5f05-4233-a109-4c38ac5161dd" style="width: 24px; height: 24px; color: limegreen; font-size: 16px; margin: 0px 0px 0px 8px;">👁</div><div style="color: white; margin: 0px 8px; font-size: 14px;">Unnamed Group</div><div style="color: magenta; margin: 0px 8px 0px 4px; font-size: 12px;">Group </div><div style="color: cyan; margin: 0px 8px; font-size: 12px;">3b1342fb-5f05-4233-a109-4c38ac5161dd</div></div></div><div style="width: 100%; background-color: rgba(0, 0, 0, 0.25); height: 24px; color: white; text-align: center; line-height: 24px; font-size: 16px; font-weight: bold;">In-frame Data</div><div style="width: 100%; background-color: rgba(0, 0, 0, 0.125); height: 16px; color: white; text-align: center; line-height: 16px; font-size: 12px; font-weight: bold;">Updated every <div style="color:limegreen;display:inline;">1s<div></div></div></div><div style="width: 100%; height: 16px; display: flex; align-items: center; justify-content: flex-start;"><div style="color: white; margin: 0px 4px 0px 8px; font-size: 14px;">Draw Calls</div><div style="color: cyan; margin: 0px 8px; font-size: 14px;">1 </div></div><div style="width: 100%; height: 16px; display: flex; align-items: center; justify-content: flex-start;"><div style="color: white; margin: 0px 4px 0px 8px; font-size: 14px;">Polygons</div><div style="color: cyan; margin: 0px 8px; font-size: 14px;">1 </div></div><div style="width: 100%; height: 16px; display: flex; align-items: center; justify-content: flex-start;"><div style="color: white; margin: 0px 4px 0px 8px; font-size: 14px;">Points</div><div style="color: cyan; margin: 0px 8px; font-size: 14px;">0 </div></div><div style="width: 100%; height: 16px; display: flex; align-items: center; justify-content: flex-start;"><div style="color: white; margin: 0px 4px 0px 8px; font-size: 14px;">Lines</div><div style="color: cyan; margin: 0px 8px; font-size: 14px;">0 </div></div><div style="width: 100%; height: 16px; display: flex; align-items: center; justify-content: flex-start;"><div style="color: white; margin: 0px 4px 0px 8px; font-size: 14px;">Geometries</div><div style="color: magenta; margin: 0px 8px; font-size: 14px;">25 </div></div><div style="width: 100%; height: 16px; display: flex; align-items: center; justify-content: flex-start;"><div style="color: white; margin: 0px 4px 0px 8px; font-size: 14px;">Textures</div><div style="color: magenta; margin: 0px 8px; font-size: 14px;">9 </div></div><div style="width: 100%; background-color: rgba(0, 0, 0, 0.25); height: 24px; color: white; text-align: center; line-height: 24px; font-size: 16px; font-weight: bold;">General Data</div><div style="width: 100%; background-color: rgba(0, 0, 0, 0.125); height: 16px; color: white; text-align: center; line-height: 16px; font-size: 12px; font-weight: bold;">Updated every <div style="color:limegreen;display:inline;">1s<div></div></div></div><div style="width: 100%; height: 16px; display: flex; align-items: center; justify-content: flex-start;"><div style="color: white; margin: 0px 4px 0px 8px; font-size: 14px;">FPS</div><div style="color: cyan; margin: 0px 8px; font-size: 14px;">144 (Anim: 60) </div></div><div style="width: 100%; height: 16px; display: flex; align-items: center; justify-content: flex-start;"><div style="color: white; margin: 0px 4px 0px 8px; font-size: 14px;">Memory Usage</div><div style="color: magenta; margin: 0px 8px; font-size: 14px;">17 / 4096 MB</div></div><div style="width: 100%; height: 16px; display: flex; align-items: center; justify-content: flex-start;"><div style="color: white; margin: 0px 4px 0px 8px; font-size: 14px;">Latency</div><div style="color: limegreen; margin: 0px 8px; font-size: 14px;">2 MS</div></div></div></state></ui></body></html>

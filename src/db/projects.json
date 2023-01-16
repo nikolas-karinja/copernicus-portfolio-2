@@ -1,39 +1,4 @@
 {
-    "elements": {
-        "dimensional": {
-            "name": "Dimensional Engine",
-            "icon": "/assets/img/icons/dimensional-logo.png"
-        },
-        "html-5": {
-            "name": "HTML5",
-            "icon": "/assets/img/icons/html5-logo.png"
-        },
-        "node-js": {
-            "name": "Node.js",
-            "icon": "/assets/img/icons/nodejs-logo.png"
-        },
-        "react": {
-            "name": "React",
-            "icon": "/assets/img/icons/react-logo.png"
-        },
-        "sass": {
-            "name": "SASS",
-            "icon": "/assets/img/icons/sass-logo.png"
-        },
-        "socket-io": {
-            "name": "Socket.io",
-            "icon": "/assets/img/icons/socketio-logo.png"
-        },
-        "three-js": {
-            "name": "Three.js",
-            "icon": "/assets/img/icons/threejs-logo.png"
-        },
-        "win-forms": {
-            "name": "Windows Forms",
-            "icon": "/assets/img/icons/winforms-logo.png"
-        }
-    },
-
     "languages": [
         {
             "name": "JavaScript (Web)",

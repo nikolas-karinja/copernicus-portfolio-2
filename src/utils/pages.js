@@ -32,7 +32,7 @@ export function createIndexButton ( imageURL, label, events = [] ) {
 
 }
 
-export function createProjectElement ( data, projectData ) {
+export function createProjectElement ( codeElements, projectData ) {
 
     const Element = document.createElement( 'project' )
     Element.title = projectData.name
@@ -53,8 +53,8 @@ export function createProjectElement ( data, projectData ) {
     for ( let e of projectData.elements ) {
 
         const ImgElement = document.createElement( 'img' )
-        ImgElement.src   = data.elements[ e ].icon
-        ImgElement.title = data.elements[ e ].name
+        ImgElement.src   = codeElements[ e ].icon
+        ImgElement.title = codeElements[ e ].name
 
         ElementsElement.appendChild( ImgElement )
 
@@ -121,6 +121,76 @@ export function createProjectElement ( data, projectData ) {
     Element.appendChild( ElementsElement )
     Element.appendChild( GithubElement )
     Element.appendChild( ProgressElement )
+
+    document.body.querySelector( 'content' ).appendChild( Element )
+
+}
+
+export function createDemoElement ( codeElements, demoData, delay ) {
+
+    const Element = document.createElement( 'demo' )
+    Element.style.animationDelay = `${ 0.001 * delay }s`
+    Element.title = demoData.name
+
+    const NameElement = document.createElement( 'h1' )
+    NameElement.innerHTML = demoData.name
+
+    const IconElement = document.createElement( 'img' )
+    IconElement.setAttribute( 'screenshot', '' )
+    IconElement.src = demoData.screenshot
+
+    const InfoElement = document.createElement( 'p' )
+    InfoElement.innerHTML = demoData.info
+
+    //
+
+    const ElementsElement = document.createElement( 'div' )
+    ElementsElement.setAttribute( 'elements', '' )
+
+    for ( let e of demoData.elements ) {
+
+        const ImgElement = document.createElement( 'img' )
+        ImgElement.src   = codeElements[ e ].icon
+        ImgElement.title = codeElements[ e ].name
+
+        ElementsElement.appendChild( ImgElement )
+
+    }
+
+    //
+
+    const GithubElement = document.createElement( 'div' )
+    GithubElement.setAttribute( 'github', '' )
+    GithubElement.title = 'Go to GitHub repository'
+
+    if ( !demoData.github ) {
+
+        GithubElement.style.setProperty( 'opacity', '0.25' )
+        GithubElement.title = 'Repository is either private or not available'
+
+    } else {
+
+        GithubElement.githubURL = demoData.github
+        GithubElement.addEventListener( 'pointerup', ( e ) => window.open( e.target.githubURL ) )
+
+    }
+
+    //
+
+    const PlayElement = document.createElement( 'div' )
+    PlayElement.setAttribute( 'play', '' )
+    PlayElement.demoLink = demoData.link
+    PlayElement.title    = 'Play the demo'
+    PlayElement.addEventListener( 'pointerup', ( e ) => window.open( e.target.demoLink ) )
+
+    //
+
+    Element.appendChild( IconElement )
+    Element.appendChild( NameElement )
+    Element.appendChild( InfoElement )
+    Element.appendChild( ElementsElement )
+    Element.appendChild( GithubElement )
+    Element.appendChild( PlayElement )
 
     document.body.querySelector( 'content' ).appendChild( Element )
 

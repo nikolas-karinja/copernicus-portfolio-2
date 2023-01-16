@@ -33,7 +33,7 @@ async function setProjectLanguage ( name ) {
                 document.body.querySelector( 'content' ).style.setProperty( 'line-height', 'inherit' )
                 document.body.querySelector( 'content' ).style.setProperty( 'text-align', 'left' )
 
-                for ( let p of l.projects ) PageUtils.createProjectElement( Data, p )
+                for ( let p of l.projects ) PageUtils.createProjectElement( CodeElements, p )
 
             } else {
 
@@ -53,7 +53,8 @@ async function setProjectLanguage ( name ) {
 
 //
 
-const Data = await FileUtils.getDataFromJSON( '/src/db/projects.json' )
+const CodeElements = await FileUtils.getDataFromJSON( '/src/db/code-elements.json' )
+const Data         = await FileUtils.getDataFromJSON( '/src/db/projects.json' )
 
 await createIndexButtons()
 await setProjectLanguage( Data.languages[ 0 ].name )

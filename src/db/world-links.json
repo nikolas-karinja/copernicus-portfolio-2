@@ -15,7 +15,7 @@
             "value" : "projects"
         },
         {
-            "name"  : "Demos",
+            "name"  : "Web Demos",
             "icon"  : "/assets/img/icons/books-colored-32.png",
             "info"  : "Go here to see some examples and demos I have made from my knowledge and experience in the field of Computer Science.",
             "type"  : "page",

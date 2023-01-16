@@ -1,0 +1,219 @@
+content {
+
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+    width: calc( 100% - 32px );
+    height: calc( 100% - 32px );
+
+    padding: 16px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+
+    & demo {
+
+        position: relative;
+
+        width: 356px;
+        height: 316px;
+
+        margin: 8px 8px 0px 0px;
+
+        animation: fade-in 1s ease forwards;
+        background: #323232;
+        border-radius: 8px;
+        cursor: pointer;
+        display: inline-block;
+        opacity: 0;
+        transition: 0.15s ease;
+
+        &:hover {
+
+            background: #424242;
+
+            & img[ screenshot ] { opacity: 0.5; }
+            & div[ play ] { opacity: 1; }
+
+        }
+
+        & div[ elements ] {
+
+            position: absolute;
+            left: 8px;
+            top: 272px;
+
+            width: calc( 100% - 16px );
+            height: 32px;
+
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            gap: 4px;
+            justify-content: center;
+
+            & img {
+
+                position: relative;
+                left: 0px;
+                top: 0px;
+
+                width: 32px;
+                height: 32px;
+
+                animation: scale-up 0.5s ease-out;
+                border-radius: 0px;
+                cursor: pointer;
+                transition: 0.15s ease;
+
+                &:hover {
+
+                    transform: scale( 1.125 );
+
+                }
+
+            }
+
+        }
+
+        & div[ github ] {
+
+            position: absolute;
+            top: 16px;
+            right: 16px;
+
+            width: 32px;
+            height: 32px;
+
+            background-image: url( "/assets/img/icons/github-logo.png" );
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 32px 32px;
+            border-radius: 0px;
+            cursor: pointer;
+            transition: 0.5s ease;
+
+            &:hover {
+
+                transform: scale( 1.125 ) rotate( -15deg );
+
+            }
+
+        }
+
+        & div[ play ] {
+
+            position: absolute;
+            left: calc( ( 100% / 2 ) - 32px );
+            top: calc( ( 191px / 2 ) - 32px );
+
+            width: 64px;
+            height: 64px;
+
+            animation: scale-in-out 1s ease infinite;
+            background-image: url( "/assets/img/icons/play-cyan.png" );
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 64px 64px;
+            border-radius: 0px;
+            cursor: pointer;
+            opacity: 0;
+            transition: 0.5s ease;
+
+        }
+
+        & h1 {
+
+            position: absolute;
+            left: 8px;
+            top: 208px;
+
+            width: calc( 100% - 16px );
+
+            margin-top: 0px;
+
+            font-size: 24px;
+            text-align: center;
+
+        }
+
+        & img {
+
+            position: absolute;
+            left: 8px;
+            top: 8px;
+
+            width: 340px;
+            height: 191px;
+
+            border-radius: 8px;
+            transition: 0.5s ease;
+
+            &[ progress ] {
+
+                left: auto;
+                top: 40px;
+                right: 8px;
+
+                width: 32px;
+                height: 32px;
+
+                border-radius: 0px;
+                cursor: pointer;
+                transition: 0.5s ease;
+
+                &:hover {
+
+                    transform: scale( 1.125 ) rotate( -15deg );
+
+                }
+
+            }
+
+            &[ npm ] {
+
+                left: auto;
+                top: 76px;
+                right: 8px;
+
+                width: 32px;
+                height: 32px;
+
+                border-radius: 0px;
+                cursor: pointer;
+                transition: 0.5s ease;
+
+                &:hover {
+
+                    transform: scale( 1.125 ) rotate( -15deg );
+
+                }
+
+            }
+
+        }
+
+        & p {
+
+            position: absolute;
+            left: 8px;
+            top: 224px;
+
+            width: calc( 100% - 16px );
+
+            text-align: center;
+
+        }
+
+    }
+
+}
+
+@keyframes scale-in-out {
+
+    0% { transform: scale( 1 ); }
+    50% { transform: scale( 0.85 ); }
+    100% { transform: scale( 1 ); }
+
+}

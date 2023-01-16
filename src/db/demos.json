@@ -1,0 +1,20 @@
+{
+    "demos": [
+        {
+            "name": "Polyum Demo (Old)",
+            "github": "https://github.com/nikolas-karinja/DEMO-polyum-old",
+            "link": "https://nikolas-karinja.github.io/DEMO-polyum-old/",
+            "elements": [ "js", "three-js", "html-5", "sass" ],
+            "screenshot": "/assets/img/screenshots/demos/polyum-old-demo.png",
+            "info": "Pre-alpha demo of the old version"
+        },
+        {
+            "name": "Bokeh and Trees",
+            "github": "https://github.com/nikolas-karinja/DEMO-bokeh-and-trees",
+            "link": "https://nikolas-karinja.github.io/DEMO-bokeh-and-trees/",
+            "elements": [ "js", "dimensional", "three-js", "html-5", "sass" ],
+            "screenshot": "/assets/img/screenshots/demos/bokeh-and-trees.png",
+            "info": "Some post-processing and trees"
+        }
+    ]
+}
