@@ -45,6 +45,8 @@ AppUtils.Apps.startApp( class App extends AppUtils.Apps.BasicThreeApp {
             entity.addComponent( WorldTrees )
             entity.addComponent( WorldLabelRenderer )
 
+            console.log( entity )
+
             this.World = entity
 
         } )
@@ -86,7 +88,7 @@ AppUtils.Apps.startApp( class App extends AppUtils.Apps.BasicThreeApp {
         if ( this.World ) {
 
             this.World.resize()
-            this.World.getComponent( 'WorldLabelRenderer' ).resize()
+            // this.World.getComponent( 'WorldLabelRenderer' ).resize()
 
         }
 

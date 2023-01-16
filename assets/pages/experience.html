@@ -54,20 +54,7 @@
             <p>Initially I wanted to use it for my games, and I still do, but I realized it was capable of so much. I started to learn how to create procedurally-generated terrain and landscapes, which were so mezmorizing to look at when I was complete with them. I even posted it to the <a>Three.js Showcase</a> and <a>Mr. Doob</a>, the creator of the library, liked it himself. You can view my showcase <a href="https://discourse.threejs.org/t/low-poly-terrain-demo-wip/33859" rel="noopener noreferrer" target="_blank">here</a>, although the link to the demo doesn't work anymore.</p>
             <p>My knowledge since then has become immense. With my understanding of <a>WebGL</a>, <a>Three.js</a>, and <a>ECS Architecture</a>, I have built my own game engine. You can see this on my <a>Projects</a> page.</p>
         </content>
-
-        <script async src="https://ga.jspm.io/npm:es-module-shims@1.6.2/dist/es-module-shims.js"></script>
-		<script type="importmap">
-			{
-				"imports": {
-					"@nikolas.karinja/app-utils": "../../node_modules/@nikolas.karinja/app-utils/build/bundle.mjs",
-					"@nikolas.karinja/ecs": "../../node_modules/@nikolas.karinja/ecs/build/bundle.mjs",
-                    "simplex-noise": "../../node_modules/simplex-noise/dist/esm/simplex-noise.js",
-					"three": "../../node_modules/three/build/three.module.js",
-                    "uuid": "../../node_modules/uuid/dist/esm-browser/index.js"
-				}
-			}
-		</script>
         
-        <script src="../../src/pages/experience.js" type="module"></script>
+        <script src="../../build/experience.js" type="module"></script>
     </body>
 </html>
