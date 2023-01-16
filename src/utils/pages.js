@@ -64,7 +64,7 @@ export function createProjectElement ( codeElements, projectData ) {
 
     const GithubElement = document.createElement( 'img' )
     GithubElement.setAttribute( 'github', '' )
-    GithubElement.src   = '/assets/img/icons/github-logo.png'
+    GithubElement.src   = '../../assets/img/icons/github-logo.png'
     GithubElement.title = 'Go to GitHub repository'
 
     if ( !projectData.github ) {
@@ -87,12 +87,12 @@ export function createProjectElement ( codeElements, projectData ) {
 
     if ( !projectData.finished ) {
 
-        ProgressElement.src   = '/assets/img/icons/wip.png'
+        ProgressElement.src   = '../../assets/img/icons/wip.png'
         ProgressElement.title = 'Work in progress'
 
     } else {
 
-        ProgressElement.src   = '/assets/img/icons/green-checkmark.png'
+        ProgressElement.src   = '../../assets/img/icons/green-checkmark.png'
         ProgressElement.title = 'Finished'
 
     }
@@ -103,7 +103,7 @@ export function createProjectElement ( codeElements, projectData ) {
 
         const NPMElement = document.createElement( 'img' )
         NPMElement.setAttribute( 'npm', '' )
-        NPMElement.src    = '/assets/img/icons/npm-logo.png'
+        NPMElement.src    = '../../assets/img/icons/npm-logo.png'
         NPMElement.title  = 'Go to NPM page'
         NPMElement.npmURL = projectData.npm
 
