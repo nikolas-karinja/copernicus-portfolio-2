@@ -22,11 +22,11 @@
             "value" : "demos"
         },
         {
-            "name"  : "Me",
+            "name"  : "Contact",
             "icon"  : "../../assets/img/icons/books-colored-32.png",
-            "info"  : "Go here to see some basic and interesting info about me as a person and what I am truly all about.",
+            "info"  : "Go here to see ways that you can contact / communicate with me.",
             "type"  : "page",
-            "value" : "me"
+            "value" : "contact"
         }
     ]
 }
